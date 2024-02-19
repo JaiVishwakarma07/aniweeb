@@ -1,0 +1,20 @@
+.categories {
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .catTitle {
+        font-family: cursive;
+        text-align: center;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    .catWrapper {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+    }
+}

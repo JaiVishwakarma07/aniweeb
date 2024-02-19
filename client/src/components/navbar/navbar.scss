@@ -1,0 +1,155 @@
+.navbar {
+    height: 56px;
+    padding-bottom: 9px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+
+    .wrapper {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            .logo {
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                // flex-direction: column;
+                // gap: 5px;
+
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                img {
+                    height: 47px;
+                    width: 47px;
+                }
+            }
+        }
+
+        .center {
+            flex: 2;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .searchContainer {
+                // border: 0.5px solid lightgray;
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+                padding: 7px;
+                width: 580px;
+                border-radius: 5px;
+                background-color: #FCF1ED;
+                height: 23px;
+
+                input {
+                    margin-left: 12px;
+                    background-color: transparent;
+                    width: 350px;
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                    word-spacing: 5px;
+                    font-family: cursive;
+                }
+            }
+
+            .searchResult {
+                position: absolute;
+                display: flex;
+                top: 55px;
+                left: 322px;
+                padding: 20px 15px;
+                background-color: white;
+                border-radius: 10px;
+                // border: 1px solid lightgray;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 580px;
+                height: auto;
+                overflow: hidden;
+                overflow-y: auto;
+                max-height: 200px;
+                border: none;
+
+                box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                    0 100px 80px rgba(0, 0, 0, 0.041);
+
+                .resultContainer {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        height: 50px;
+                        width: 50px;
+                        object-fit: contain;
+                    }
+
+                    h2 {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+
+
+        .right {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            margin-right: 50px;
+
+            h1 {
+                display: flex;
+                gap: 4px;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+                align-items: center;
+
+                span {
+                    font-size: 7px;
+                }
+
+            }
+
+            .auth {
+                background-color: #D82F5A;
+                color: white;
+                padding: 5px 10px 5px 10px;
+                border-radius: 30px;
+            }
+
+            .cartIcon {
+                display: flex;
+                gap: 6px;
+            }
+        }
+    }
+}

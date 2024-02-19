@@ -1,0 +1,80 @@
+.account {
+    margin-top: 89px;
+
+    .accountContainer {
+        padding: 50px;
+
+        .accountWrapper {
+            background-color: white;
+            padding: 20px;
+
+            .titleContainer {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                h1 {
+                    font-weight: 500;
+                }
+
+                h2 {
+                    font-weight: 300;
+                }
+            }
+
+            .accountItems {
+                display: grid;
+                gap: 50px;
+                grid-template-columns: auto auto auto;
+                padding: 30px;
+                justify-content: center;
+
+
+                .item {
+                    padding: 10px;
+                    border: 0.5px solid lightgray;
+                    border-radius: 5px;
+                    display: flex;
+                    gap: 20px;
+                    width: 300px;
+                    height: 120px;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    img {
+                        height: 45px;
+                        width: 45px;
+                    }
+
+                    .itemDesc {
+                        h2 {}
+
+                        h3 {
+                            font-weight: 300;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .buttonContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    height: 40px;
+                    width: 180px;
+                    border: none;
+                    background-color: #D82F5A;
+                    color: white;
+                    font-size: 17px;
+                    border-radius: 4px;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.cart {
+    margin-top: 90px;
+
+    .wrapperCart {
+        padding: 20px;
+
+        .title {
+            font-family: cursive;
+            font-weight: 600;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+
+            .topButton {
+                padding: 10px;
+                font-weight: 600;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .topTexts {
+                .topText {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    margin: 0px 10px;
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .info {
+                flex: 3;
+                border-radius: 10px;
+
+                hr {
+                    background-color: #eee;
+                    border: none;
+                    height: 5px;
+                }
+
+                .cartProduct {
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #fff;
+                    height: 300px;
+
+
+                    .cartProductDetail {
+                        flex: 2;
+                        display: flex;
+
+                        img {
+                            width: 250px;
+                        }
+
+                        .details {
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 5px;
+
+                            .cartProductName {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            .cartProductId {}
+
+                            .cartProductColor {
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                // background-color: purple;
+                            }
+
+                            .cartProductSize {}
+                        }
+                    }
+
+                    .priceDetail {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .cartProductAmountContainer {
+                            display: flex;
+                            align-items: center;
+                            // margin-bottom: 10px;
+
+                            .cartProductAmount {
+                                font-size: 24px;
+                                margin: 5px;
+                            }
+                        }
+
+                        .cartProductPrice {
+                            font-size: 30px;
+                            font-weight: 750;
+                            color: #A7101E;
+                        }
+                    }
+                }
+            }
+
+            .summary {
+                flex: 1;
+                border: 0.5px solid lightgray;
+                border-radius: 7px;
+                padding: 20px;
+                height: 40vh;
+                border: none;
+                background-color: white;
+
+                .summaryTitle {
+                    font-weight: 500;
+                    text-align: center;
+                }
+
+                .summaryItem {
+                    margin: 15px 0px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .summaryItemText {
+                        font-size: large;
+                    }
+
+                    .summaryItemPrice {
+                        font-weight: bold;
+                        font-size: large;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: black;
+                    color: white;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
