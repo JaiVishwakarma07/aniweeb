@@ -52,7 +52,7 @@ const Navbar = () => {
                     {isComponentVisible && <div className="searchResult">
                         {
                             products.map((item) => (
-                                <Link to={`/product/${item._id}`} className="resultContainer link" >
+                                <Link to={`./product/${item._id}`} className="resultContainer link" >
                                     <img src={`/upload/${item.img}`} alt="" />
                                     <h2>{item.title}</h2>
                                 </Link>

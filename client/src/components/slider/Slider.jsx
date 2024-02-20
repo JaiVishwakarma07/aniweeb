@@ -16,7 +16,7 @@ const Slider = () => {
     };
     return (
         <div className="slider">
-            <div className="arrow" style={{ left: "10px" }} onClick={() => { handleClick("left") }} >
+            <div className="arrow" style={{ left: "10px" }} onClick={() => handleClick("left")} >
                 <ArrowLeftOutlined />
             </div>
             <div className="wrapper" style={{ transform: `translateX(${slideIndex * -100}vw)` }} >

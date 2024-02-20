@@ -11,16 +11,11 @@ import { addProduct } from '../../redux/cartSlice'
 import { useParams } from 'react-router-dom'
 import { useQuery } from "@tanstack/react-query";
 import newRequest from '../../utils/newRequest'
-
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 const Product = () => {
-    // const product = {
-    //     id: 1,
-    //     title: "nice tshirt",
-    //     img: "/img/tshirt/ithachitshirt.png",
-    //     price: 1000,
-    //     quantity: 2,
-    // }
+
     const { id } = useParams()
     const { isLoading, error, data } = useQuery({
         queryKey: ['product'],
@@ -40,10 +35,23 @@ const Product = () => {
         }
     };
 
+    const notifySuccess = () => {
+        toast.success('Added to Cart', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            // transition: Bounce,
+        });
+    }
+
     const handleClick = (product, quantity) => {
-        // console.log(product)
-        // console.log(quantity)
         dispatch(addProduct({ product, quantity }))
+        notifySuccess()
     }
 
     return (
@@ -94,8 +102,21 @@ const Product = () => {
                                     <span className="productAmount">{quantity}</span>
                                     <Add onClick={() => handleQuantity("inc")} />
                                 </div>
-                                <button style={{ backgroundColor: "#D82F5A", color: "white" }} >WISHLIST</button>
-                                <button onClick={() => handleClick(data, quantity)} >ADD TO CART</button>
+                                <button className='addToCart' style={{ backgroundColor: "#D82F5A", color: "white" }} >WISHLIST</button>
+                                <button className='addToCart' onClick={() => handleClick(data, quantity)} >ADD TO CART</button>
+                                <ToastContainer
+                                    position="top-right"
+                                    autoClose={5000}
+                                    hideProgressBar={false}
+                                    newestOnTop={false}
+                                    closeOnClick
+                                    rtl={false}
+                                    pauseOnFocusLoss
+                                    draggable
+                                    pauseOnHover
+                                    theme="light"
+                                // transition: Bounce,
+                                />
                             </div>
                             <hr />
                             <p className="desc">
