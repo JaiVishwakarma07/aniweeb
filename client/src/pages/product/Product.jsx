@@ -7,20 +7,20 @@ import Navbar from '../../components/navbar/Navbar'
 import Announcement from '../../components/announcement/Announcement'
 import Reviews from '../../components/reviews/Reviews'
 import { useDispatch } from 'react-redux'
-import addProduct from '../../redux/cartRedux'
+import { addProduct } from '../../redux/cartSlice'
 import { useParams } from 'react-router-dom'
 import { useQuery } from "@tanstack/react-query";
 import newRequest from '../../utils/newRequest'
 
 
 const Product = () => {
-    const product = {
-        id: 1,
-        title: "nice tshirt",
-        img: "/img/tshirt/ithachitshirt.png",
-        price: 1000,
-        quantity: 2,
-    }
+    // const product = {
+    //     id: 1,
+    //     title: "nice tshirt",
+    //     img: "/img/tshirt/ithachitshirt.png",
+    //     price: 1000,
+    //     quantity: 2,
+    // }
     const { id } = useParams()
     const { isLoading, error, data } = useQuery({
         queryKey: ['product'],
@@ -40,7 +40,7 @@ const Product = () => {
         }
     };
 
-    const handleClick = (product) => {
+    const handleClick = (product, quantity) => {
         // console.log(product)
         // console.log(quantity)
         dispatch(addProduct({ product, quantity }))
@@ -95,7 +95,7 @@ const Product = () => {
                                     <Add onClick={() => handleQuantity("inc")} />
                                 </div>
                                 <button style={{ backgroundColor: "#D82F5A", color: "white" }} >WISHLIST</button>
-                                <button onClick={() => handleClick(product)} >ADD TO CART</button>
+                                <button onClick={() => handleClick(data, quantity)} >ADD TO CART</button>
                             </div>
                             <hr />
                             <p className="desc">
